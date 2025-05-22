@@ -3,40 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>塔羅筆記室</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <title>塔羅對話空間</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&display=swap');
+
     body {
-      background: #fdfaf6;
-      color: #2f2f2f;
       font-family: 'Noto Serif TC', serif;
-      line-height: 1.75;
-      padding: 3rem 1.5rem;
-      max-width: 700px;
+      background: #f5f5f0;
+      color: #222;
+      line-height: 1.8;
+      padding: 2rem 1.5rem;
+      max-width: 740px;
       margin: auto;
     }
 
     h1, h2, h3 {
-      font-family: 'Patrick Hand', cursive;
-      color: #543f2d;
+      font-weight: normal;
+      line-height: 1.4;
       margin-bottom: 1rem;
     }
 
     h1 {
-      font-size: 1.8rem;
-      border-left: 4px solid #c2a87f;
-      padding-left: 0.5rem;
+      font-size: 1.6rem;
+      color: #444;
     }
 
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-top: 3rem;
+      color: #444;
     }
 
     h3 {
       font-size: 1.1rem;
       margin-top: 2rem;
-      color: #5b4e44;
+      color: #555;
     }
 
     p {
@@ -45,35 +46,42 @@
 
     .section {
       margin-bottom: 3rem;
-      padding: 1.5rem;
-      border-left: 2px dashed #d7c8b4;
-      background: #fffefa;
+      padding: 1.5rem 2rem;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.03);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1.2s ease both;
     }
 
-    .quote {
-      font-style: italic;
-      color: #996;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1rem;
-      border-left: 2px solid #e2dac8;
+    .section:hover {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
     .price {
-      color: #725b43;
-      font-size: 0.95rem;
+      color: #666;
       font-style: italic;
     }
 
     a {
-      color: #a45b4f;
-      text-decoration: underline dotted;
+      color: #7c5b3e;
+      text-decoration: underline;
     }
 
-    hr {
-      border: none;
-      border-top: 1px dashed #cbb;
-      margin: 2rem 0;
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem;
+      }
+
+      .section {
+        padding: 1.2rem;
+      }
     }
   </style>
 </head>
@@ -132,8 +140,8 @@
     <p class="price">起始費用：HKD $238（含首輪占卜與對談）<br>
     後續每輪延伸占卜：HKD $100–$150（視情況而定）</p>
 
-    <p class="quote">「如果你不確定要選哪種，也沒關係。<br>
-    你可以直接填問卷，我會幫你整理，再說適合用哪種方式進來。」</p>
+    <p>如果你不確定要選哪種，也沒關係。<br>
+    你可以直接填問卷，我會幫你整理，再說適合用哪種方式進來。</p>
   </section>
 
   <section class="section" id="booking">
@@ -150,6 +158,9 @@
 
     <p>4｜占卜完成後，我會整理一份 PDF 給你，<br>
     裡面包含抽到的牌、我的解讀、以及一些占後可以參考的提醒。</p>
+
+    <p>這是一種慢慢展開的占卜，不需要即時回覆，也不需要準備好。<br>
+    你只要想開始，就已經夠了。</p>
 
     <p><a href="https://你的問卷連結">→ 點此填寫問卷</a></p>
   </section>
